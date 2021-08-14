@@ -26,6 +26,7 @@ const Createitem=(props)=>{
   const saveNote=()=>{
     if (note.title!=="" && note.content!==""){
       props.onAdd(note)
+      
     }
     
 
