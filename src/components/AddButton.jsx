@@ -13,7 +13,7 @@ var f=()=>{
 const AddButton=()=>{
    
     return(
-        <button onClick={f} id="AddButton"><i  class="plus fas fa-plus fa-3x "></i></button>
+        <button onClick={f} id="AddButton"><i  class="plus fas fa-plus fa-2x "></i></button>
     )
 }
 export default AddButton;
