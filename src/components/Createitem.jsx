@@ -32,7 +32,7 @@ const Createitem=(props)=>{
     }
     
 
-     
+    document.querySelector(".plus").classList.toggle('cross')
     document.querySelector(".description").classList.toggle('make');
     document.querySelector(".header").classList.toggle('make');
     document.querySelector("#rootimg").classList.toggle('make');
