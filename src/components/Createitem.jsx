@@ -26,6 +26,9 @@ const Createitem=(props)=>{
   const saveNote=()=>{
     if (note.title!=="" && note.content!==""){
       props.onAdd(note)
+      setNote({title:"",content:""})
+      document.querySelector("#ititle").value=""
+      document.querySelector("#iarea").value=""
     }
     
 
