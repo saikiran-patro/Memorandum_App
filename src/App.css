@@ -1,38 +1,218 @@
-.App {
-  text-align: center;
+body {
+    margin:0px;
+
+}
+.App{
+    margin: 0px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+.header h1{
+    display:flex;
+    
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    color:white !important;
+    background:linear-gradient(to right ,#5B56CE,#AA2EE6);
+    margin: 0px !important;
+    padding: 10px;
+    color: #fff;
+  font-family: "McLaren", cursive;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  font-weight: 200;
+  font-size:2rem;
 }
 
-.App-link {
-  color: #61dafb;
+.description{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    background:linear-gradient(to right ,#5B56CE,#AA2EE6);
+    font-size: 1rem;
+    padding-bottom: 20rem;
+    border-radius: 0 0 50% 50%/0 0 100% 100%;
+}
+.description h2{
+    position: relative;
+    top:110px;
+    color:whitesmoke;
+    font-family: 'Noto Sans TC', sans-serif;
+}
+#rootimg{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+#noteimg{
+    
+    z-index: 1;
+    width:30rem;
+    height:25rem;
+    position: relative;
+    top:-150px;
+    
+    border-radius:100%;
+
+}
+.Createnote{
+    padding:50px;
+    border-radius:15px;
+    box-shadow: 0px -1px 20px 2px #5B56CE; 
+    position: fixed;
+    visibility: hidden;
+    z-index:3;
+   
+    left:50%;
+    top:40%;
+    transform: translate(-50%,-50%);
+   
+  
+    width:50%;
+}
+.Createnote form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+#ititle{
+    width:100%;
+    padding:20px;
+    border:2px solid #867AE9;
+    
+    border-radius: 5px;
+}
+#iarea{
+    width:100%;
+    padding:20px;
+    border:2px solid #867AE9;
+    
+    border-radius: 5px;
+}
+
+#AddButton{
+    position:fixed;
+    right:40px;
+    bottom:40px;
+   background-color: aliceblue;
+   color:#5B56CE;
+   border-radius:100%;
+   padding:20px;
+   border:2px solid #5B56CE;
+   z-index:4;
+
+}
+.active{
+   
+    background:white;
+    top:50%;
+    left:50%;
+    visibility:visible;
+    transition: 0.5s;
+    filter: none;
+    
+}
+.make{
+    filter:blur(5px)
+}
+
+.Noteitem{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding:20px;
+    
+    border-radius: 15px;
+    box-shadow: 0px -1px 30px 2px #5B56CE; 
+    width:30%;
+    
+    margin:20px;
+
+}
+ .notetitle{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width:100%;
+    background:linear-gradient(to right ,#5B56CE,#AA2EE6);
+    color:whitesmoke;
+    
+}
+.Noteitem #deletenote{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.Notescontainer{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: space-around;
+
+}
+.footer{
+    color:white;
+    margin-top:70px;
+    border-radius: 50% 50% 0 0/100% 100% 0 0;
+    padding:50px;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to right ,#5B56CE,#AA2EE6);
+    font-weight: bold;
+    font-size:20px;
+}
+
+
+/* mobile version */
+@media(min-width:1000px ) and (max-width:1080px){
+
+    .footer{
+        display: none;
+    }
+    
+}
+
+@media(max-width:833px){
+    #AddButton{
+            font-size:10px;
+            padding:10px;
+            bottom:5px;
+            right:5px;
+    }
+    .description h2{
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    .footer{
+        padding:60px;
+
+    
+        border-radius:0px;
+
+    }
+    .description{
+        border-radius:0px;
+        
+    }
+    #noteimg{
+        top:-120px;
+        border-radius:20px;
+        width:15rem;
+        height:10rem;
+    }
+    .Createnote{
+       
+        width:80%;
+    }
+    .Noteitem{
+        width:90%;
+    }
 }
